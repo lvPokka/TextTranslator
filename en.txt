@@ -935,22 +935,16 @@ title:"向右旋转90°"|title:"Rotate right 90°"
 label:"上传预览图"|label:"Upload preview image"
 title:"文件处理"|title:"File processing"
 label:"上传视频"|label:"Upload video"
-tooltip:"在智能设备上展示视频"|tooltip:"Show video on smart device"
 label:"序列帧"|label:"Sequence frame"
 label:"Mp4视频"|label:"Mp4 video"
-title:"填充"|title:"Fill"
-title:"上传图片尺寸≤200*200"|title:"Upload image size ≤ 200*200"
 label:"类型"|label:"Type"
-label:"上传资源"|label:"Upload resource"
 message:"智能类型为轻智能时，无法使用Mp4资源，仅能使用预览图！"|message:"When the smart type is light smart, you cannot use Mp4 resources, only preview images can be used!"
 title:"播放"|title:"Play"
-label:"默认显示"|label:"Default display"
 label:"重复播放"|label:"Repeat play"
 label:"播放次数"|label:"Number of plays"
 tooltip:"播放次数大于等于1，但不能超过10"|tooltip:"Number of plays is greater than or equal to 1, but cannot exceed 10"
 label:"帧率"|label:"Frame rate"
 title:"画布显示"|title:"Canvas display"
-label:"视频"|label:"Video"
 label:"预览图"|label:"Preview image"
 title:"预览"|title:"Preview"
 label:"不换行"|label:"No line break"
@@ -1108,7 +1102,6 @@ label:"翻转文字方向"|label:"Flip text direction"
 label:"两象限"|label:"Two quadrants"
 label:"四象限"|label:"Four quadrants"
 label:"指针光源"|label:"Pointer light source"
-label:"填充"|label:"Fill"
 title:"指针特性"|title:"Pointer attributes"
 label:"指针阴影"|label:"Pointer shadow"
 label:"指针阴影Y轴偏移量"|label:"Pointer shadow Y-axis offset"
@@ -1313,7 +1306,6 @@ content:"最大可添加"|content:"You can add up to"
 content:"至少需要一个条件"|content:"You need at least one condition."
 content:"最大可添加3个动效，无法继续添加"|content:"You can add up to 3 animations at most. You cannot add more."
 content:"资源有误"|content:"Wrong resource."
-content:"视频长度不可超过3s"|content:"The video length cannot exceed 3s."
 content:"视频帧率过高不可超过30"|content:"The video frame rate is too high and cannot exceed 30."
 content:"文字长度超出限制"|content:"The text length exceeds the limit."
 content:"文字中不能包含 #"|content:"The text cannot contain #"
@@ -1337,8 +1329,7 @@ content:"表盘文件已推送到手机根目录 "|content:"The dial file has be
 `图片体积不可超过${qi(Vr,{base:2,standard:"jedec"})}`|`The image size cannot exceed ${qi(Vr,{base:2,standard:"jedec"})}`
 `最多只能绑定${Re.maxSourceCountByTextTagBind}个数据源`|`You can only bind at most ${Re.maxSourceCountByTextTagBind} data sources`
 `请先上传小部件 ${y} 的边框图`|`Please upload the border image of the widget ${y} first`
-`视频分辨率不可超过设备分辨率：${_}*${v}`|`Video resolution cannot exceed device resolution：${_}*${v}`
-`视频分辨率不可超过设备分辨率：${m}*${h}`|`Video resolution cannot exceed device resolution:${m}*${h}`
+`视频分辨率不可超过设备分辨率：$|`Video resolution cannot exceed device resolution: $
 `组嵌套最多支持${Re.groupInletDeep}层！`|`Group nesting supports up to ${Re.groupInletDeep} layers!`
 `不可使用"${c}"数据源，请修改`|`The "${c}" data source cannot be used, please modify`
 `最多支持${i}个元素，已到达数量上限，无法添加！`|`Supports up to ${i} elements, the upper limit has been reached and cannot be added!`
@@ -1365,7 +1356,8 @@ content:"表盘文件已推送到手机根目录 "|content:"The dial file has be
 " 注意：请检查图中数据源是否为默认值，如有问题请点击刷新或自行上传。 "|"Note: Please check whether the data source in the figure is the default value. If there is any problem, please click Refresh or upload it yourself."
 "表盘未设置多配色；"|"The dial is not set to multiple colors;"
 "图组需要绑定数据源使用"|"This object needs to be bound to the data source."
-tooltip:`可在${G(g).min*100}%-${G(g).max*100}%之间调整，缩放值超过100%时，图片会模糊，请注意！`|tooltip:`It can be adjusted between ${G(g).min*100}%-${G(g).max*100}%. When the zoom value exceeds 100%, the image will be blurred, please note! `
+`可在$|`Available at $
+之间调整，缩放值超过100%时，图片会模糊，请注意！`|When the zoom value exceeds 100%, the image will be blurred, please note!`
 "表盘类型"|"Dial Type"
 "样式列表"|"Style List"
 "创建表盘"|"Create watch face"
@@ -1428,12 +1420,13 @@ tooltip:`可在${G(g).min*100}%-${G(g).max*100}%之间调整，缩放值超过10
 "旋转属性"|"Rotation properties"
 "旋转中心"|"Center of rotation"
 "通过"|"pass"
-`息屏非黑像素占比不可超过${g.max*100}%：当前${v}%;`|`Non-black pixels on AOD cannot exceed ${g.max*100}%： current${v}%;`
+`息屏非黑像素占比不可超过$|`The proportion of non-black pixels on the screen cannot exceed $
+：当前$|： Current $
 "未获取数据时显示“--:--”，请上传“-”"|"When data is not obtained, it will display “--:--”, please upload “-”"
 "未获取数据时显示“--/--”，请上传“-”"|"When data is not obtained, it will display “--/--”, please upload “-”"
 "未获取数据时显示“--”，请上传“-”"|"When data is not obtained, it will display “--”, please upload “-”"
 " 高级设置 "|"Advanced settings"
-" 填充 "|"Filler"
+"填充"|"Filler"
 "设备名称"|"Device Name"
 "设备型号"|"Model"
 "上一步 "|"Previous"
@@ -1444,6 +1437,10 @@ tooltip:`可在${G(g).min*100}%-${G(g).max*100}%之间调整，缩放值超过10
 "动画序列帧/视频"|"Animation/video"
 " 元素只在满足条件时显示，其他情况隐藏； "|"The element is only displayed when the condition is met, otherwise it is hidden;"
 "动态预览图用于上传至表盘市场！"|"Dynamic preview images are used to upload to the watch face market!"
+"该数据项图片较多，无法使用’普通填充‘属性，请使用数字填充。"|"This data item has too many images, so the 'normal fill' attribute cannot be used. Please use digital fill."
+" 上传图片宽高数值需保持一致 "|"The width and height of the uploaded image must be consistent"
+" 未获取数据时显示“--”"|"When no data is obtained, “--” is displayed"
+"( 与负号共用同一图片 ) "|"( Shares the same image as the minus sign ) "
 "添加动效"|"Add Animation"
 " 添加语言 "|"Add a language"
 `请上传“${c.label}”`|`Symbol “${c.label}”`
@@ -1460,10 +1457,12 @@ tooltip:`可在${G(g).min*100}%-${G(g).max*100}%之间调整，缩放值超过10
 "格式: |"Format: 
 "预览图"|"Preview"
 ?"亮屏":|?"Normal":
+"上传序列帧"|"Upload resource"
 "启用":"关闭"|"Enable":"Disable"
 "上传图片"|"Upload image"
 "空状态"|"N/A"
 "刷新"|"Refresh"
+?"其他":|?"Other":
 "动态预览图"|"Dynamic preview image"
 " 去绑定 "|"Bind"
 "筛选"|"Filter"
@@ -1496,9 +1495,13 @@ header:"示例"|header:"Example"
 "确定"|"Ok"
 " 确定 "|"Ok"
 "心率区间"|"HR Zone"
+"视频"|"Video"
+"序列帧"|"Sequence"
+"默认显示"|"Default display"
 "缺少小部件边框图"|"Widget border image is missing"
 "缺少小部件预览图"|"Widget preview image is missing"
 " 应用版本（发布时间）："|"Application version (release): "
+"视频长度不可超过"|"The video length cannot exceed"
 "我的模板库"|"Templates"
 "毫秒"|"ms"
 "安静"|"Quiet"
@@ -1560,7 +1563,7 @@ header:"示例"|header:"Example"
 " 图片处理中 "|" Image processing "
 "第三步（3/3）"|"Step 3 (3/3)"
 "数据校验"|"Data Verification"
-`位置${g+1}`|`Location ${g+1}`
+`位置$|`Location $
 " 暂未使用【"|"Data item 【"
 "】数据项 "|"】 not used yet"
 "指南针方向"|"Compass direction"
@@ -1571,3 +1574,7 @@ header:"示例"|header:"Example"
 "工具下载中..."|"Downloading tools..."
 "视频处理中..."|"Video processing..."
 "处理完成"|"Processing completed"
+"在智能设备上展示视频"|"Show videos on smart devices"
+`上传图片尺寸|`Upload image size
+"无模板数据"|"No template data"
+"名称不可为空"|"Name cannot be empty"

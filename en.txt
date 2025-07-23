@@ -1608,5 +1608,3 @@ header:"示例"|header:"Example"
 "正在充电"|"Charging"
 "屏幕已解锁"|"Unlocked"
 "屏幕已锁定"|"Locked"
-ssl-cdn.static.browser.mi-img.com|localhost
-=>({isIntranet:|=>({isIntranet:$(1),isIntranet2:

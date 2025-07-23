@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.IO;
 using System.Text.RegularExpressions;
+using System.Linq.Expressions;
 
 namespace TextTranslator
 {
@@ -12,9 +13,10 @@ namespace TextTranslator
         private static List<string> errors = new List<string>();
         static void Main(string[] args)
         {
-            Console.Title = "TextTranslator v1.02";
+            Console.Title = "TextTranslator v1.03";
             Console.OutputEncoding = System.Text.Encoding.UTF8;
             string translationsPath = @"en.txt";
+            string patchsPath = @"patch.txt";
 
             //PrepareWords(args[0]);
 
@@ -28,6 +30,13 @@ namespace TextTranslator
             if (!File.Exists(translationsPath))
             {
                 Console.WriteLine("[Fail] Translation dictionary file not found. (require 'en.txt')");
+                Console.ReadLine();
+                return;
+            }
+
+            if (!File.Exists(patchsPath))
+            {
+                Console.WriteLine("[Fail] Patch dictionary file not found. (require 'patch.txt')");
                 Console.ReadLine();
                 return;
             }
@@ -63,7 +72,7 @@ namespace TextTranslator
                 var parts = line.Split(new[] { '|' }, 2);
                 if (!translations.ContainsKey(parts[0]))
                     translations[parts[0]] = parts[1];
-            }
+            }            
 
             var sorted = translations
                 .OrderByDescending(kv => kv.Key.Length)
@@ -88,23 +97,32 @@ namespace TextTranslator
             watch.Stop();
             Console.WriteLine($"Execution time:{watch.ElapsedMilliseconds}ms");
 
-            var proMode = @"static versionType(){var t;return((t=window.electron)==null?void 0:t.versionType)??""normal""}static isProfessional(){var t;return((t=window.electron)==null?void 0:t.versionType)==""professional""}";
-            if (content.IndexOf(proMode) > 0)
-            {
-                content = content.Replace(
-                    proMode,
-                    @"static versionType(){return""professional""}static isProfessional(){return true}"
-                );
-                Console.WriteLine($"******************************************");
-                Console.WriteLine($"[Success] PRO version patch applied!");
-            }
-            else
-            {
-                Console.WriteLine($"******************************************");
-                Console.WriteLine($"[Fail] Faild to apply PRO version!");
-            }
 
-            Console.WriteLine($"");
+            Console.WriteLine($"\n\n**************Patch Executor**************");
+            foreach (var line in File.ReadLines(patchsPath))
+            {
+                if (string.IsNullOrWhiteSpace(line) || !line.Contains("|"))
+                    continue;
+
+                var parts = line.Split(new[] { '|' }, 3);
+
+                var zzz = content;
+                content = content.Replace(parts[1], parts[2]);
+                var currentColor = Console.ForegroundColor;
+                if (content != zzz)
+                {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine($"Patch: {parts[0]}\nStatus: Success");
+                    Console.ForegroundColor = currentColor;
+                }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine($"Patch: {parts[0]}\nStatus: Failed");
+                    Console.ForegroundColor = currentColor;
+                }
+                Console.WriteLine($"******************************************");
+            }
 
             if (isOrigFile)
             {

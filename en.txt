@@ -1630,6 +1630,7 @@ content:"表盘文件已推送到手机根目录 "|content:"The dial file has be
  的修改？ | changes?
 "息屏"|"AOD"
 "配色1"|"Color1"
+"配色"|"Color"
 "表盘样例收进这里啦"|"The dial samples are stored here"
 "序列帧数量限制："|"Sequence frame quantity limit:"
 "内存上限："|"Memory limit:"

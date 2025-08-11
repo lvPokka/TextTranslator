@@ -1295,7 +1295,6 @@ title:"无法成组"|title:"Cannot form a group"
 title:"无法成容器"|title:"Cannot form a container"
 title:"图层错误"|title:"Layer error"
 title:"工具版本过旧，已不支持！"|title:"Tool version is too old and no longer supported!"
-title:"操作失败"|title:"Operation failed"
 title:"状态机名称错误"|title:"State machine name error"
 title:"状态机错误"|title:"State machine error"
 title:"Rive文件夹错误"|title:"Rive folder error"
@@ -1355,7 +1354,6 @@ content:"请联系小米获取最新工具包，否则表盘制作会有问题�
 content:"该目录下不存在序列帧图片（图片仅支持png格式）"|content:"There are no sequence frame images in this directory (images only support png format)"
 content:"序列帧数量不可超过"|content:"The number of sequence frames cannot exceed"
 content:"序列帧图片大小不一，请保存一致"|content:"The size of sequence frame images is different, please save them consistently"
-content:"未使用数据源，无法预览动效"|content:"The data source is not used, and the animation cannot be previewed"
 content:"文件夹内必须包含一个.riv文件"|content:"The folder must contain a .riv file"
 content:"不同设备之间表盘能力有差异，是否修改？"|content:"The watch face capabilities of different devices are different. Do you want to modify it?"
 content:"最大可添加5个动画，无法继续添加"|content:"You can add up to 5 animations at most. You cannot add more."
@@ -1389,15 +1387,19 @@ content:"表盘文件已推送到手机根目录 "|content:"The dial file has be
 " 尺寸有误，请刷新或重新上传！ "|"The size is wrong, please refresh or re-upload!"
 " 未连接到小米内网，部分设备可能无法使用，请先连接到小米内网。 "|" Not connected to Xiaomi intranet. Some devices may not be available. Please connect to Xiaomi intranet first. "
 `图片大小不可超过${c}*${d}`|`Image size cannot exceed ${c}*${d}`
-`最多支持${R}个组成容器，请您调整后再成容器。`|`Supports up to ${R} containers. Please adjust before forming a container.`
 `图片尺寸错误，图片大小必须为${y}*${b}px`|`Wrong image size, image size must be ${y}*${b}px`
-`图片体积不可超过${qi(Vr,{base:2,standard:"jedec"})}`|`The image size cannot exceed ${qi(Vr,{base:2,standard:"jedec"})}`
-`最多只能绑定${Re.maxSourceCountByTextTagBind}个数据源`|`You can only bind at most ${Re.maxSourceCountByTextTagBind} data sources`
+`图片体积不可超过${|`Image size cannot exceed ${
+`最多只能绑定${|`You can only bind at most ${
+}个数据源`|} data sources`
 `请先上传小部件 ${y} 的边框图`|`Please upload the border image of the widget ${y} first`
 `视频分辨率不可超过设备分辨率：$|`Video resolution cannot exceed device resolution: $
-`组嵌套最多支持${Re.groupInletDeep}层！`|`Group nesting supports up to ${Re.groupInletDeep} layers!`
+`组嵌套最多支持${|`Group nesting supports up to ${
+}层！`|} layers!`
 `不可使用"${c}"数据源，请修改`|`The "${c}" data source cannot be used, please modify`
-`最多支持${i}个元素，已到达数量上限，无法添加！`|`Supports up to ${i} elements, the upper limit has been reached and cannot be added!`
+`最多支持${|`Supports up to ${
+}个元素，已到达数量上限，无法添加！`|} elements, the upper limit has been reached and cannot be added!`
+`最多支持${|`Supports up to ${
+}个组成容器，请您调整后再成容器。`|} containers. Please adjust before forming a container.`
 `仅需一个名称为${e}的状态机即可`|`Only one state machine named ${e} is needed`
 `状态机名称必须为${e}`|`State machine name must be ${e}`
 "该样式下已存在此色值，无法重复设置"|"This color value already exists in this style and cannot be set again"
@@ -1456,6 +1458,7 @@ content:"表盘文件已推送到手机根目录 "|content:"The dial file has be
 " 小部件边框图 "|" Widget border image"
 " 小部件预览图 "|" Widget Preview "
 "批量生成"|"Batch Generation"
+"静态预览图"|"Static preview image"
 "摄氏度"|"Celsius"
 "华氏度"|"Fahrenheit"
 "背景"|"Background"
@@ -1467,7 +1470,6 @@ content:"表盘文件已推送到手机根目录 "|content:"The dial file has be
 "数据"|"Data"
 "选择文件夹"|"Select Folder"
 "基本元素"|"Elements"
-"刷新预览图"|"Regenerate"
 "描述"|"Comment"
 "取消"|"Cancel"
 "取消 "|"Cancel"
@@ -1540,9 +1542,17 @@ content:"表盘文件已推送到手机根目录 "|content:"The dial file has be
 "空状态"|"N/A"
 "刷新"|"Refresh"
 ?"其他":|?"Other":
-"动态预览图"|"Dynamic preview image"
+"动态预览图"|"DynamicPreviewImage"
+" 未上传动图 "|"Not Generated"
+"上传动图"|"Upload"
+"刷新预览图（静态）"|"Refresh static img"
+"处理中：生成预览图..."|"Preview generation..."
+"处理中：遍历数据..."|"Traversing data..."
+"处理中..."|"Processing..."
 " 去绑定 "|"Bind"
 "筛选"|"Filter"
+"保存失败"|"Save failed"
+"数据保存失败，无法正常导出"|"Save failed, unable to export"
 " 全部导出 "|"Export All"
 " 息屏校验 "|"Verify"
 "空气质量等级"|"Air Quality Level"

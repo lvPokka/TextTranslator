@@ -1388,11 +1388,12 @@ content:"表盘文件已推送到手机根目录 "|content:"The dial file has be
 " 未连接到小米内网，部分设备可能无法使用，请先连接到小米内网。 "|" Not connected to Xiaomi intranet. Some devices may not be available. Please connect to Xiaomi intranet first. "
 "元素超出当前表盘分辨率的范围不合理"|"Elements exceeding the current screen resolution are not reasonable"
 `图片大小不可超过${|`Image size cannot exceed ${
-`图片尺寸错误，图片大小必须为${y}*${b}px`|`Wrong image size, image size must be ${y}*${b}px`
+`图片尺寸错误，图片大小必须为${|`Wrong image size, image size must be ${
 `图片体积不可超过${|`Image size cannot exceed ${
 `最多只能绑定${|`You can only bind at most ${
 }个数据源`|} data sources`
-`请先上传小部件 ${y} 的边框图`|`Please upload the border image of the widget ${y} first`
+`请先上传小部件 ${|`Please upload the border image of the widget ${
+} 的边框图`|} first`
 `视频分辨率不可超过设备分辨率：$|`Video resolution cannot exceed device resolution: $
 `组嵌套最多支持${|`Group nesting supports up to ${
 }层！`|} layers!`
@@ -1446,6 +1447,18 @@ content:"表盘文件已推送到手机根目录 "|content:"The dial file has be
 "编辑表盘"|"Edit watch face"
 " 查看bin文件 "|"Show .bin"
 导出mwz包|Export .mwz
+"最多40个字符,汉字不超过13个"|"Maximum 40 char and 13 for Chinese characters"
+"格式必须为n.n.n，例如：0.0.1"|"Format must be n.n.n, for example: 0.0.1"
+"名称不能以数字开头"|"Name cannot start with a number"
+"名称不能以 . 开头"|"Name cannot start with ."
+"版本号不可为空"|"Version number cannot be empty"
+'名称不能有|'Name cannot have
+"该设备不支持选择保加利亚语或者立陶宛语"|"This device does not support Bulgarian or Lithuanian language selection"
+"该设备不支持容器中 无 组件放在最后"|"This device does not support placing components last in the container."
+"元素不可拖拽"|"Elements cannot be dragged"
+`样式：${|`Style：${
+} 中找不到图层：${|} not found in layer：${
+找不到`|Not found`
 "已生成表盘bin文件！"|"The watch face bin file has been generated!"
 "该元素不支持动效"|"This element does not support animation"
 "弧形进度条，请上传包含进度条本身的弧形切图"|"Arc progress bar, please upload the arc cutout including the progress bar itself"

@@ -1,4 +1,3 @@
 PRO Version override|static versionType(){var t;return((t=window.electron)==null?void 0:t.versionType)??"normal"}static isProfessional(){var t;return((t=window.electron)==null?void 0:t.versionType)=="professional"}|static versionType(){return"professional"}static isProfessional(){return true}
 Intranet override|.value=!1)}catch{|.value=1)}catch{
 Tracker removal|ssl-cdn.static.browser.mi-img.com|localhost
-Show pkgID by default|o.pkgName!==|"xxx"!==

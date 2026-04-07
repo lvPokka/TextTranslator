@@ -1,4 +1,4 @@
-> Update: 10.11.2025
+> Update: 05.04.2026
 
 ### How to use
 + Drag and drop js file for translations on exe

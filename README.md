@@ -10,6 +10,10 @@
 4. Network (press F5) -> index-xxxxxxxx.js -> Save for overrides
 5. Go to folder, and edit created file
 
-<video src="https://github.com/lvPokka/TextTranslator/blob/main/demo.mp4" width="320" height="240" controls></video>
+
+
+https://github.com/user-attachments/assets/183152f3-2156-4ddd-b3a0-cbdf1a041ba8
+
+
 
 > password:123

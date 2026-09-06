@@ -17,10 +17,6 @@ namespace TextTranslator
             string translationsPath = @"en.txt";
             string patchesPath = @"patch.txt";
 
-#if DEBUG
-            //args = new string[] { "C:\\Users\\PoKka\\Desktop\\root\\cdn.cnbj1.fds.api.mi-img.com\\watchface-renderer-normal\\assets\\index-8966d1b3.js.orig" };//
-            args = new string[] { "C:\\Users\\PoKka\\source\\repos\\TextTranslator\\TextTranslator\\bin\\Debug\\source.js.orig" };//
-#endif
             if (args.Length == 0 || !File.Exists(args[0]))
             {
                 Console.WriteLine("[Fail] Please drop 'index-xxxxxxx.js' for translations. Accept any 'js' file");

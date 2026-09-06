@@ -12,6 +12,8 @@
 4. Network (press F5) -> index-xxxxxxxx.js -> Save for overrides
 5. Go to folder, and edit created file
 
+https://github.com/user-attachments/assets/183152f3-2156-4ddd-b3a0-cbdf1a041ba8
+
 ### Smart string replace
 
 String with dynamic vars to change:

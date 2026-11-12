@@ -1,4 +1,4 @@
-> Update: 07.09.2026
+> Update: 12.11.2026
 
 :warning: breaking change, delimiter changed from | to ¦
 

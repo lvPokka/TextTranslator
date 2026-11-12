@@ -220,16 +220,14 @@ label:"血压单位"¦label:"Blood Pressure"
 label:"血糖值"¦label:"Blood Sugar"
 comment:"0～25.0 单位mmol/L"¦comment:"0～25.0 unit mmol/L"
 label:"血糖更新时间"¦label:"Blood Sugar Time"
-label:"日出时间"¦label:"Sunrise"
-comment:"日出时间（跟随系统24H/12H设置）"¦comment:"Sunrise time (follow 24H/12H setting)"
-label:"日落时间"¦label:"Sunset"
-comment:"日落时间（跟随系统24H/12H设置）"¦comment:"Sunset time (follow 24H/12H setting)"
-label:"日出时间小时"¦label:"Sunrise Hour"
-comment:"日出时间小时部分（跟随系统24H/12H设置）"¦comment:"sunrise time hour part (follow 24H/12H setting)"
+"日出时间小时部分（24H）"¦"Sunrise time – hour component (24H)"
+"日落时间（24H）"¦"Sunset time (24H)"
+"日落时间小时（24H）"¦"Sunset time (24-hour format)"
+"日落时间小时部分（24H）"¦"Sunset time – hour component (24-hour format)"
+"日出时间（24H）"¦"Sunrise time (24H)"
 label:"日出时间分钟"¦label:"Sunrise Minutes"
 comment:"日出时间分钟部分"¦comment:"Sunrise time minute part"
-label:"日落时间小时"¦label:"Sunset Hour"
-comment:"日落时间小时部分（跟随系统24H/12H设置）"¦comment:"Sunset time hour part (follow 24H/12H setting)"
+"日出时间小时（24H）"¦"Sunrise time (24-hour format)"
 label:"日落时间分钟"¦label:"Sunset Minutes"
 comment:"日落时间分钟部分"¦comment:"Sunset time minute part"
 label:"温度单位"¦label:"Temperature "
@@ -1222,7 +1220,6 @@ title:"所属样式"¦title:"Style"
 title:"配色"¦title:"Color"
 title:"图层"¦title:"Layer"
 title:"校验规则"¦title:"Verification rules"
-title:"是否通过"¦title:"Passed"
 title:"操作"¦title:"Operation"
 title:"表盘息屏（AOD）信息"¦title:"Watch face AOD information"
 title:"图片占用内存"¦title:"Image memory usage"
@@ -1429,7 +1426,7 @@ desc:"157° <= 指南针角度 < 202°"¦desc:"157° <= compass angle < 202°"
 desc:"202° <= 指南针角度 < 247°"¦desc:"202° <= compass angle < 247°"
 desc:"247° <= 指南针角度 < 292°"¦desc:"247° <= compass angle < 292°"
 desc:"292° <= 指南针角度 < 337°"¦desc:"292° <= compass angle < 337°"
-desc:"序列帧帧率>=30，导致表盘整体功耗为3级"¦desc:"A sequence frame rate >= 30 results in an overall power consumption level of 3 for the watch face."
+"秒针帧率>=30，导致表盘整体功耗为3级"¦"With a second-hand frame rate of ≥30 fps, the overall power consumption of the watch face reaches Level 3."
 desc:"表盘动效面积>=13%，导致表盘整体功耗为3级"¦desc:"The dial's dynamic area is >=13%, resulting in an overall power consumption level of 3 for the dial."
 desc:"表盘动效面积占比>=50%，导致表盘整体功耗为3级"¦desc:"The dial's dynamic effect area accounts for >=50%, resulting in an overall power consumption level of 3 for the dial."
 desc:"序列帧帧率>=25，导致表盘整体功耗为3级"¦desc:"A frame rate of >=25 results in an overall power consumption level of 3 for the watch face."
@@ -1476,7 +1473,6 @@ label:"动画效果"¦label:"Animation effects"
 }个元素，已到达数量上限，无法添加！`¦} elements, the upper limit has been reached and cannot be added!`
 `最多支持${¦`Supports up to ${
 }个组成容器，请您调整后再成容器。`¦} containers. Please adjust before forming a container.`
-`仅需一个名称为${e}的状态机即可`¦`Only one state machine named ${e} is needed`
 "该样式下已存在此色值，无法重复设置"¦"This color value already exists in this style and cannot be set again"
 "元素已锁定，不可移动位置"¦"The element is locked and cannot be moved"
 "人像/相册图层不可修改位置"¦"The position of the portrait/album layer cannot be modified"
@@ -1841,6 +1837,21 @@ errMsg:'自定义名称仅支持输入字符、数字、特殊字符仅支持"."
 " 加载本地表盘 "¦" Load local watch face "
 "生成预览图可能需要一段时间，请耐心等待"¦"Generating a preview image may take some time, please be patient."
 "方向和角度对照关系："¦"Direction and angle correspondence："
+"已开启 OTA 升级模式"¦"OTA upgrade mode enabled"
+"表盘还没有导出记录，首次导出后开始保持 UID。"¦"No export history for this WF; tracked after first export."
+⚡`与上一次导出的版本对照失败（#0#），导出时会改为按内容匹配，改过的容器可能保不住 UID。`¦`Comparison with the previously version failed (#0#); the export process will switch to content-based matching, which may result in the loss of UIDs for modified containers.`
+⚡`有 ${#0#} 个容器、$#1#} 个组没对上上一次导出的版本：$#2#}。导出后它们可能拿到别的组空出来的旧 UID，装着旧版本的手表升级后，用户在这些容器里选的组可能变成别的组。如果开启前改过表盘，建议撤销修改后重新开启。`¦`${#0#} containers and $#1#} groups do not match the version from the previous export: $#2#}. After exporting, these may be assigned old UIDs that were vacated by other groups; consequently, if a watch running an older version is updated, the groups selected by the user within these containers might end up being different groups. If you modified your watch faces before enabling this feature, it is recommended that you revert those changes and then re-enable the feature.`
+"容器和组都已对上上一次导出的版本。"¦"The containers and groups have been matched to the version from the previous export."
+"开启 OTA 升级模式？"¦"Enable OTA update mode?"
+"关闭 OTA 升级模式？"¦"Disable OTA update mode?"
+"用于已安装在手表上的表盘升级：开启后导出时，容器和组沿用上一次导出的 UID，升级后用户在容器里的选择不会丢失。请在修改表盘之前开启。"¦"For upgrading watch faces already installed on a watch: When this option is enabled during export, containers and groups will retain the UIDs from the previous export, ensuring that users' selections within those containers are preserved after the upgrade. Please enable this before making any modifications to the watch face."
+"关闭后导出会按普通规则重新分配 UID，已安装旧版本的手表升级后，可能找不回用户在容器里的选择。"¦"Once disabled, the export process will reassign UIDs according to standard rules; consequently, if a watch with an older version installed is upgraded, the user’s previous selections within the container may no longer be retrievable."
+"开启"¦"Turn on"
+"已关闭 OTA 升级模式"¦"OTA update mode disabled"
+OTA 升级模式失败`¦OTA update mode failed`
+"OTA 升级模式"¦"OTA upgrade mode"
+"当前表盘正在打开，无法返回，请稍后重试"¦"The current watch face is opening; you cannot go back. Please try again later."
+⚡`边框图 ${#0#}，参考尺寸 ${#1#}，仅提醒可忽略。`¦`Border ${#0#}, dimensions ${#1#}; provided for ref.`
 ⚡Error(`图层：#0# 移动至 #1# 失败`)¦Error(`Layer: #0# failed to move to #1#`)
 ⚡title:`帧率过高（帧率为#0#帧）`¦title:`Frame rate too high (frame rate is #0# frames)`
 ⚡Error(`图层：#0# 不存在`)¦Error(`Layer: #0# does not exist.`)
@@ -1858,3 +1869,4 @@ errMsg:'自定义名称仅支持输入字符、数字、特殊字符仅支持"."
 ⚡Error(`时间格式错误：#0#，请使用 HH:MM 格式（如 08:30）`)¦Error(`Time format error: #0#, please use HH:MM format (e.g., 08:30)`)
 ⚡Error(`时间格式错误：#0#，请使用 HH:MM 或 HH:MM:SS 格式（如 08:30 或 08:30:25）`)¦Error(`Time format error: #0#. Please use HH:MM or HH:MM:SS format (e.g., 08:30 or 08:30:25).`)
 ⚡(`预览图尺寸为 #0#，期望尺寸为#1#（正常尺寸 #2#），请确认是否符合预期`)¦(`The preview image size is #0#, and the expected size is #1# (normal size #2#). Please confirm if it meets your expectations.`)
+⚡`仅需一个名称为${#0#}的状态机即可`¦`Only one state machine named ${#0#} is needed`
